@@ -1,0 +1,69 @@
+/* Styles spécifiques pour l'application */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Amélioration de la responsivité pour les tableaux */
+@media (max-width: 768px) {
+  .responsive-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    white-space: nowrap;
+  }
+  
+  /* Adaptation des cartes statistiques pour mobile */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Animation pour les boutons */
+.btn-hover-effect {
+  transition: transform 0.2s ease;
+}
+
+.btn-hover-effect:hover {
+  transform: translateY(-2px);
+}
+
+/* Styles pour les écrans de grande taille */
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .large-padding {
+    padding: 2rem;
+  }
+}
+
+/* Styles pour l'impression */
+@media print {
+  .no-print {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}

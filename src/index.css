@@ -1,0 +1,122 @@
+/* Styles globaux pour l'application */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #003366;
+  --secondary-color: #0056b3;
+  --accent-color: #e0e7ff;
+  --text-color: #333333;
+  --background-color: #f5f7fa;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Styles pour les tableaux responsives */
+.responsive-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table table {
+  min-width: 100%;
+}
+
+/* Styles pour les boutons */
+.btn {
+  @apply px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+/* Styles pour les cartes */
+.card {
+  @apply bg-white rounded-lg shadow-lg p-6;
+}
+
+/* Styles pour les QR codes */
+.qr-container {
+  @apply border-4 border-blue-800 p-2 rounded-lg inline-block;
+}
+
+/* Styles pour les badges de statut */
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-semibold;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Styles pour les alertes */
+.alert {
+  @apply p-4 mb-4 border-l-4;
+}
+
+.alert-success {
+  @apply bg-green-100 border-green-500 text-green-700;
+}
+
+.alert-warning {
+  @apply bg-yellow-100 border-yellow-500 text-yellow-700;
+}
+
+.alert-danger {
+  @apply bg-red-100 border-red-500 text-red-700;
+}
+
+/* Styles pour le footer */
+.footer {
+  @apply mt-6 text-sm text-gray-500 text-center;
+}
